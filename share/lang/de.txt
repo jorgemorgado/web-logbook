@@ -1,0 +1,160 @@
+# Web logbook German strings
+# (refer to the English translation for details about the format of this file)
+#
+
+1	Die Anzahl der Logbucheinträge (%d) ist kleiner als %d.
+2	Die Dateigrösse des Logbuches (%.1f Mb) ist kleiner als %.1f Mb.
+3	%s Archive
+4	Datenbank
+5	Name der Datenbank
+6	Dateigrösse der Datenbank
+7	Total Einträge
+8	Offenes Archiv
+9	Das Upload Directory (%s) für Anhänge kann nicht kreiert werden.
+10	ID des Anhangs kann nicht gefunden werden. Falscher HTTP referer (%s)?
+11	Upload Fehler (Fehler Code: %d).
+12	Ins Upload Directory (%s) kann nicht geschrieben werden. %s.
+13	Keine Datei erhalten.
+14	Die ausgewählte Datei (%s) kann nicht entfernt werden. %s.
+15	(automatisch erkennen)
+16	%s Anhang
+17	(max. %dMb, oder der Upload wird stillschweigend beendet)
+18	Content-Type
+19	Die ausgewählte Datei (%s) kann nicht geöffnet werden. %s.
+20	%s Liste der Anhänge
+21	Dateiname
+22	Binär
+23	Eintrag im Feld "Betreff" ist erforderlich.
+24	Einen neuen Eintrag hinzufügen
+25	Betreff
+26	Beschreibung
+27	(Leer bedeutet "jetzt")
+28	sichern
+29	zurücksetzen
+30	anhängen
+31	Logbuch Einträge (%d)
+32	Logbuch Suchresultat (%d)
+33	%s durchsuchen
+34	(anhängen)
+35	mit
+36	ohne
+37	%s Archiv durchsuchen
+38	Suchkriterium
+39	Gross-/Kleinschreibung beachten
+40	Im Archiv blättern
+41	Drucken
+42	Schliessen
+43	Letzter Zugriff
+44	Zurück
+45	Datum auswählen
+46	Betreff auswählen
+47	Aufsteigend
+48	Absteigend
+49	Löschen
+50	Sind Sie sicher?
+51	Typ
+52	%s Betreff
+53	Bearbeiten
+54	Suchen
+55	Archiv
+56	Online anschauen
+57	Letzte Bearbeitung
+58	Datum
+59	Benutzer
+60	Keine Dateien
+61	1 Datei
+62	%d Dateien
+63	Neu
+64	Liste der Anhänge
+65	Von
+66	Zu
+67	Das Logbuch wurde erfolgreich archiviert.
+68	Die Archivierung des Logbuches ist fehlgeschlagen.
+69	Das Logbuch ist noch leer. Archivierung fehlgeschlagen!
+70	Eintrag Nummer: %d bearbeiten
+71	Logbuch wechseln
+72	Sprache wechseln
+73	Das Startdatum ist aktueller als das Enddatum. Die Daten wurden ausgetauscht.
+74	Trends
+75	Tage
+76	Keine Einträge gefunden.
+77	15 Minuten
+78	Stunde
+79	Tag
+80	Woche
+81	Monat
+82	Jahr
+83	%s Trends
+84	%s Archiv Trends
+85	Trends Intervall
+86	Auf %s Einträge beschränken.
+87	Trends (%d Einträge Analysiert)
+88	Statistik
+89	Top Betreff
+90	Top Benutzer
+91	Top Anhänge
+92	Wert
+93	Einträge im Logbuch
+94	Einträge mit Anhängen
+95	Anhänge
+96	Aktive Benutzer
+97	Ältester Eintrag
+98	Neuster Eintrag
+100	Intervall
+101	Durchschnittliche Eingaben / %s
+102	Der Betreff ist zu lang.
+103	Die Beschreibung ist zu lang.
+104	Pos.
+105	Anzahl
+106	Fehler
+107	Warnung
+108	Hinweis
+109	Information
+110	Debug
+111	vorheriger
+112	nächster
+113	Anzeigen
+114	Suchen
+115	Bitte geben Sie ein Suchkriterium ein.
+116	und
+117	oder
+118	Es stehen noch %d Zeichen zur Verfügung
+119	Es stehet noch 1 Zeichen zur Verfügung
+120	Es stehen keine Zeichen mehr zur Verfügung
+121	Importieren
+122	Exportieren
+123	%s Export
+124	%s Import
+125	Der Dateiname ist erforderlich.
+126	Format
+127	(Hinweis: Anhänge werden nicht automatisch importiert)
+128	Bitte laden Sie das Logbook neu - %d Einträge wurden importiert.
+129	%d Anhänge wurden nicht importiert.
+130	%d ungültige Einträge gefunden.
+131	Ungültiges Dateiformat. Keine Einträge importiert.
+132	Web Logbook
+133	Delimiter-separated values (CSV, ...)
+134	Extensible Markup Language (XML)
+135	Trennsymbol
+136	Komma
+137	Tabulator
+138	Dopplepunkt
+139	Strichpunkt
+140	Pipe-Zeichen
+141	Optionen
+142	Standard
+143	Gruppen
+144	- Tag
+145	- Woche
+146	- Monat
+147	- Jahr
+148	- Benutzer
+149	- Betreff
+150	W
+151	Ansicht
+152	Alles erweitern
+153	Alles schliessen
+154	Laden...
+155	Die gewählte Ansicht ist nicht verfügbar.
+156	Datum/Uhrzeit ungültig.
+157	'%s' vermisst auf Abschnitt '%s'.

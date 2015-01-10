@@ -1,0 +1,78 @@
+Some useful development notes
+=============================
+
+Tables structure
+----------------
+
+logbook:
++----+------------+------+---------+-------------+--------------+
+| id |  timestamp | user | subject | description | attach_count |
+|  0 |          1 |    2 |       3 |           4 |            5 |
++----+------------+------+---------+-------------+--------------+
+|  1 | 1183852750 |  lab |   sub_1 |      desc_1 |            1 |
+|  2 | 1183852753 |  sow |   sub_2 |      desc_2 |            1 |
+|  3 | 1183852756 |   tp |   sub_3 |      desc_3 |            0 |
+|  4 | 1183856359 |  ljb |   sub_4 |      desc_4 |            2 |
++----+------------+------+---------+-------------+--------------+
+
+subject:
++----+----------+
+| id |  subject |
+|  0 |        1 |
++----+----------+
+|  1 |    sub_1 |
+|  2 |    sub_2 |
+|  3 |    sub_3 |
+|  4 |    sub_4 |
++----+----------+
+
+attach:
++----+--------------+------------+---------+------------+-------+
+| id |         path | logbook_id | file_id |   filename |  type |
+|  0 |            1 |          2 |       3 |          4 |     5 |
++----+--------------+------------+---------+------------+-------+
+|  1 | attach/spopx |          1 |   80229 | index.html |  html |
+|  3 | attach/spopx |          2 |   30765 |  test1.txt | plain |
+|  4 | attach/spopx |          4 |   68787 |  book.html |  html |
+|  2 | attach/spopx |          4 |   21937 |  test2.txt | plain |
++----+--------------+------------+---------+------------+-------+
+
+
+A short description on how the logbook manages attachments
+----------------------------------------------------------
+
+Adding attachments:
+
+- The index.cgi page generates an attach ID based on the timestamp and PID.
+  <timestamp> is the time when index.cgi was generated;
+  <pid> is the process ID of the httpd daemon that executed index.cgi
+  Ex: 1182847335-26596 ...
+
+- The attach ID is passed to the attach.cgi and all uploaded files will be
+  stored under ../share/attach/<lid>_attach/<attachID>_<pid>_<filename>
+  <lid> is the logbook ID;
+  <pid> is the process ID of the httpd daemon that executed attach.cgi;
+  <filename> is the name of the uploaded file.
+
+- If the attach.cgi popup window is closed and re-opened, the attach ID is
+  used to relate attachments already uploaded (filename: <attachID>_*)
+
+Saving a logbook entry with attachments:
+
+- On saving an entry, files named ../share/attach/<lid>_attach/<attachID>_*
+  will be renamed by changing their prefix to the logbook entry nr (<lnr>).
+  <lnr> is the sequence number of the logbook entry once saved.
+  Ex:
+  ../<attachID>_<pid>_filename1 -> ../lnr_<pid>_filename1
+  ../<attachID>_<pid>_filename2 -> ../lnr_<pid>_filename2
+
+Edit a logbook entry with attachments:
+
+- On editing an entry, the attachID in the index.cgi page will be the same
+  as the <lnr> (logbook entry nr). Thus attach.cgi popup window will find
+  the respective attachments based on this prefix.
+
+Delete a logbook entry with attachments:
+
+- On deleting an entry, also delete all files with the prefix <lnr>.
+  <lnr> is the logbook entry nr which should be the attachment file prefix.

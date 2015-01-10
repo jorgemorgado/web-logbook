@@ -1,0 +1,160 @@
+# Web logbook Portuguese strings
+# (refer to the English translation for details about the format of this file)
+#
+
+1	O número de registos (%d) é inferior a %d.
+2	O tamanho do livro de registos (%.1f Mb) é inferior a %.1f Mb.
+3	Arquivo %s
+4	Base de dados
+5	Nome da base de dados
+6	Tamanho da base de dados
+7	Total de registos
+8	Abrir Arquivo
+9	Incapaz de criar o directório para guardar anexos (%s).
+10	ID do anexo não encontrado. 'HTTP referer' errado (%s)?
+11	Erro no envio do ficheiro (código do erro: %d).
+12	Incapaz de escrever no directório para guardar anexos (%s). %s.
+13	Nenhum ficheiro recebido.
+14	Incapaz de remover o ficheiro seleccionado (%s). %s.
+15	(detectar automaticamente)
+16	Anexos %s
+17	(max. %dMb, ou o envio terminará sem notificação)
+18	Tipo de conteúdo
+19	Erro ao abrir o ficheiro seleccionado (%s). %s.
+20	%s Lista de anexos
+21	Nome do ficheiro
+22	Binário
+23	O campo Assunto é obrigatório
+24	Adicionar nova entrada
+25	Assunto
+26	Descrição
+27	(vazio significa 'agora')
+28	Gravar
+29	Restaurar
+30	Anexo
+31	Livro de registos (%d)
+32	Resultado da pesquisa no livro de registos (%d)
+33	Pesquisar %s
+34	(anexo)
+35	com
+36	sem
+37	Pesquisar Arquivo %s
+38	Critério de pesquisa
+39	Pesquisa sensível à capitalização
+40	Ver Arquivo
+41	Imprimir
+42	Fechar
+43	Hora do último acesso
+44	Voltar
+45	Seleccionar data
+46	Seleccionar assunto
+47	Ascendente
+48	Descendente
+49	Apagar
+50	Tem a certeza?
+51	Tipo
+52	Assuntos %s
+53	Modificar
+54	Pesquisar
+55	Arquivar
+56	Ver 'online'
+57	Hora da última modificação
+58	Data
+59	Utilizador
+60	sem anexos
+61	1 anexo
+62	%d anexos
+63	Nova entrada
+64	Lista de anexos
+65	Desde
+66	Até
+67	Livro de registos arquivado com sucesso.
+68	O arquivo do livro de registos falhou.
+69	O livro de registos está vazio. Impossível arquivar!
+70	Modificar registo número: %d
+71	Alterar livro de registos
+72	Alterar idioma
+73	A data de início é posterior à data final. Os seus valores foram trocadas.
+74	Tendências
+75	dias
+76	Nenhum registo encontrado.
+77	15 minutos
+78	hora
+79	dia
+80	semana
+81	mês
+82	ano
+83	%s Tendências
+84	Tendências do arquivo %s
+85	Intervalo de tendências
+86	Limitar os resultados a %s registos.
+87	Tendências (%d registos analisados)
+88	Statísticas
+89	Top de Assuntos
+90	Top de Utilizadores
+91	Top de Anexos
+92	Valor
+93	Ocorrências no livro de registos
+94	Ocorrências com anexos
+95	Anexos
+96	Utilizadores activos
+97	Ocorrência mais antiga
+98	Ocorrência mais recente
+100	Intervalo
+101	Média de registos por %s
+102	O campo Assunto é demasiado longo.
+103	O campo Descrição é demasiado longo.
+104	Pos.
+105	Total
+106	Erro
+107	Aviso
+108	Notificação
+109	Informação
+110	Análise
+111	Anterior
+112	Seguinte
+113	Mostrar
+114	Procurar
+115	Por favor insira o critério de pesquisa.
+116	E
+117	Ou
+118	%d caracteres disponíveis
+119	1 caracter disponível
+120	nenhum caracter disponível
+121	Importar
+122	Exportar
+123	%s Exportar
+124	%s Importar
+125	O nome do ficheiro é obrigatório.
+126	Formato
+127	(nota: os anexos não são importados automaticamente)
+128	Por favor, re-abra o livro de registos - %d registo(s) importados.
+129	Um total de %d anexo(s) não foram importados.
+130	Foram encontrados %d registos inválidos.
+131	O formato do ficheiro é inválido. Nenhum registo importado.
+132	Web Logbook (nativo)
+133	Delimiter-separated values (CSV, ...)
+134	Extensible Markup Language (XML)
+135	Separador
+136	Vírgula
+137	Tab
+138	Dois pontos
+139	Ponto-e-vírgula
+140	Barra vertical
+141	Opções
+142	Normal
+143	Agrupar por
+144	- dia
+145	- semana
+146	- mês
+147	- ano
+148	- utilizador
+149	- assunto
+150	S
+151	Ver
+152	Abrir todos
+153	Fechar todos
+154	A carregar...
+155	A opção seleccionada não está disponível.
+156	Data/hora inválida(s).
+157	Directiva '%s' em falta na secção '%s'.

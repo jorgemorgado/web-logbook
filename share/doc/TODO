@@ -1,0 +1,28 @@
+TODO:
+
+* Users list per logbook
+* Auto-archiving based on:
+	a) date (ex: rotate the logbook every month or year)
+* Web server authentication (username + password in config file)
+* Once user auth is done, remove user drop-down and take logged in user
+* XML export schema needs improvement
+* Matrix view
+* More AJAX
+
+(add more entries to the above list :))             
+
+
+BUGS:
+
+(these are 'well-know' limitations but not serious ones - at least not for me)
+
+- The Config object has a bug where wraping lines with '\' can be done
+  only once per configuration line.
+
+- The logbook might have some problems when _not_ running on Unix-like
+  systems. Mostly, this is due to the Directory Separator being something
+  different than / (slash). If you have such system, please let me know so
+  that I can (try to) fix it.
+
+- The Export/Import options are limited to logbook entries only. Attachment
+  and Subject lists are not exported nor imported.

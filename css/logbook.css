@@ -1,0 +1,219 @@
+/* global */
+body {
+	margin: 5px;
+	color: #000;
+	background: #fff;
+	font-family: sans-serif,lucida,verdana,helvetica,arial;
+}
+
+hr.line {
+	border-top-width: thin;
+	border-top-style: solid;
+	border-top-color: #000000;
+	height: 1px;
+	width: 100%
+}
+
+/* generic */
+:link {
+	color: #039;
+}
+
+:visited {
+	color: #636;
+}
+
+:link:hover, :visited:hover {
+	color: #333;
+}
+
+:link:active, :visited:active {
+	color: #000;
+}
+
+/* menu */
+#menu {
+	margin-bottom: 1em;
+}
+
+#menu table {
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #cfcfcf;
+	-moz-border-radius: 5px; /* not yet? standard but is nice on mozilla */
+}
+
+#menu td {
+	background-color: #fff;
+	padding: 4px;
+	font-size: 12px;
+}
+
+#menu td.left {
+	text-align: left;
+}
+
+#menu td.right {
+	text-align: right;
+}
+
+#menu .form {
+	display: inline;
+}
+
+#menu .obj {
+	font-size: 10px;
+	vertical-align: middle;
+}
+
+/* top menu popup (the option that opens the popup menu) */
+#menutup {
+	position: relative;
+	text-decoration: none;
+}
+
+/* popup menu window */
+#menupup {
+	position: absolute;
+	display: none;
+	width: 122px;
+	border: 1px solid #000;
+	top: 0px;
+	left: 0px;
+}
+
+/* popup menu option */
+#menupup td.option {
+	background-color: #fff;
+	padding: 3px;
+	font-size: 12px;
+}
+
+/* popup menu separator */
+#menupup td.separator {
+	border-top: 1px solid #000;
+	height: 1px;
+	width: 120px;
+	font-size: 0;
+	text-decoration: none;
+}
+
+/* language list */
+#menu .lang {
+	font-size: 10px;
+	vertical-align: middle;
+	height: 17px;
+}
+
+/* title bar */
+#title table {
+	width: 100%;
+}
+
+#title td.left {
+	text-align: left;
+	vertical-align: top;
+}
+
+#title .heading {
+	font-size: 105%;
+	font-weight: bold;
+	color: #000;
+}
+
+/* NOTE: you can use this class to define any style for your banner */
+#title td.banner {
+	text-align: right;
+}
+
+/* content */
+#content {
+	margin-top: 1em;
+	font-size: 11px;
+}
+
+#content table {
+	width: 100%;
+}
+
+#content table th {
+	font-size: 10px;
+	font-weight: bold;
+}
+
+#content tr.section {
+	background-color: #cfcfcf;
+	color: #000;
+	height: 2.5em;
+	vertical-align: bottom;
+	font-weight: bold;
+}
+
+#content tr.even, input.input {
+	background-color: #dbeaf5;
+}
+
+#content tr.odd {
+	background-color: #ffffff;
+}
+
+#content tr.title {
+	background-color: #e3f2a2;
+}
+
+#content tr.nowrap {
+	white-space: nowrap;
+}
+
+#content table td {
+}
+
+#content a {
+}
+
+#content .notify {
+	background-color: #ffff99;
+	border-spacing: 0;
+	padding: 10px;
+	width: 100%;
+}
+
+/* tree container */
+#content .tree {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* tree items */
+#content .tree ul {
+	margin-left: 20px;
+	padding-left: 0px;
+	display: none;	/* initially hide sub nodes */
+}
+
+/* nodes */
+#content .tree li {
+	list-style-type: none;
+	vertical-align: middle;
+	padding-left: 1px;
+}
+
+/* node links */
+#content .treelink {
+	font-size: 11px;
+	color: #000;
+	text-decoration: none;
+	padding-left: 1px;
+}
+
+/* small text (like a footnote) */
+.smalltext{
+	font-size: 10px;
+	color: #666;
+}
+
+/*
+.fixed,pre,code {
+	font-family: Courier New,Courier;
+}
+*/

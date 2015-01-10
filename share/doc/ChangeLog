@@ -1,0 +1,64 @@
+* Information
++ New feature
+- Bug fixed
+
+2012-01-12
+  Version 0.06 released.
+  + Updates server time every second.
+  + 'Mail' configuration section can email notifications on logbook updates.
+  + Added popup menu for less common options (and gain space on top menu bar).
+  + Added group view (by day, week, month, year, user and subject) on menu bar.
+  - Fixed bug in language flags not being displayed when AppRoot was changed.
+  - Fixed bug in subject.cgi where styles didn't apply when AppRoot was changed.
+  - Fixed bug in trends.cgi where styles didn't apply when AppRoot was changed.
+  * Introduced AJAX (when loading group nodes).
+  - Fixed bug with timestamp when us calendar format was used.
+  + User defined configuration directives can now use the dash character.
+  - Logbook's name and active/default lists are not case sensitive anymore.
+  + Logbook's banner(s) can now be a comma separated list of banners.
+  - Fixed bug when copying a subject with special HTML chars to the logbook.
+  * Small code adjustments (optimizations and removed obsolete Perl syntax).
+
+2008-01-23
+  Version 0.05 released.
+  + Added the IBM ISS Threat Index banner in logbook.cfg.
+  - Fixed bug while doing a case sensitive search.
+  - Fixed bug that prevented the And/Or criteria to work on the Print page.
+  + Count characters left for the description field. Limit on maximum length.
+  + Limit on maximum length for the subject field (with JS in addition to HTML).
+  + Subject popup now sorted ascending when opened (instead of logbook order).
+  + Alphabet anchor menu in subject popup.
+  + Check required file name on attachment upload (with JS).
+  - Search sintax is now regexp 'free' - special chars are escaped accordingly.
+  * Search with regular exp. is still possible by adding the 'regexp' prefix.
+  - Fixed bug that prevented 'us' date format from being correctly displayed.
+  + New Export/Import options.
+  + Added 'wlb' and 'csv' formats to logbook.cfg types list.
+  - Browse Archive showed redundant Search and Trends menus when book was empty.
+  - Fixed broken sort when switching between index.cgi and attview.cgi pages.
+  * Many other code optimizations.
+
+2007-10-09
+  Version 0.04 released.
+  + Selected page is now kept between logbook operations.
+  - Selected sort (field and direction) is now kept between logbook operations.
+  - Selected user is now kept between logbook operations.
+  + favicon.ico added.
+  + In the search form, the blank user (no user) is now translated.
+  - Fixed small bug in the print view when loading the IE6 CSS fix.
+  * Minimum required Perl changed to v5.003 (due to function prototypes).
+  + Archives are now sorted chronologically.
+  * Re-adjusted the menu order to be consistent among different pages.
+  + Quick search by subject on the top menu (on the main page).
+  + Search can now be exclusive (and) or inclusive (or).
+
+2007-09-26
+  Version 0.03 released.
+  + ChangeLog (this file) created.
+  - Bug fixed in attview.cgi that prevented attachments from being displayed.
+  + Added the Atlas Threat Index banner in logbook.cfg.
+  * In the logbook.cfg only set as active the currently supported languages.
+
+2007-09-05
+  Version 0.02 released.
+  * Project registered.

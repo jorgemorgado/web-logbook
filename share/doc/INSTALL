@@ -1,0 +1,46 @@
+The installation process is made to be quick and painless.
+Only Perl and core modules should be required.
+
+1. Extract the application onto your Web server's document root:
+
+   $ gzip -d logbook-x.yz.tar.gz
+   $ tar xvf logbook-x.yz.tar
+
+   By default the application extracts to './logbook' directory. You can
+   still change this in the logbook.cfg configuration file.
+
+
+2. Modify the configuration:
+
+   $ vi ./logbook/share/etc/logbook.cfg
+
+
+3. Edit your web-server's configuration. On Apache would be something like:
+
+   ScriptAlias /logbook/cgi-bin/ "/webserver/real/path/htdocs/logbook/cgi-bin/"
+   <Directory "/webserver/real/path/htdocs/logbook/cgi-bin">
+       AllowOverride None
+       Options None
+       Order allow,deny
+       Allow from all
+   </Directory>
+   # prevents access to the 'share' directory
+   <Directory "/webserver/real/path/htdocs/logbook/share">
+       Deny from all
+   </Directory>
+
+
+4. Grant write access for your web server's user on the following directories:
+
+   $ chown nobody ./logbook/share/attach
+   $ chown nobody ./logbook/share/db
+
+
+5. Reload/restart your webserver's configuration.
+
+
+6. Using your browser go to: http://your.domain.here/logbook/cgi-bin/index.cgi
+
+
+--
+Please, report any problems and questions to <weblogbook (at) morgado (dot) ch>

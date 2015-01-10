@@ -1,0 +1,6 @@
+/* avoids an IE6 bug re. frames and scrollbars */
+body {
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	width: expression(document.documentElement.clientWidth - 30);
+}

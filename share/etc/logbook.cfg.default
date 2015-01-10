@@ -1,0 +1,470 @@
+#
+# e-Logbook configuration file
+#
+# $Id$
+#
+
+# Where is your web logbook installed (from your webserver's root)
+AppRoot	/logbook			# default is '/logbook'
+
+# Global directives affect all logbooks. These directives can also be defined
+# per logbook (which will take priority over the global definitions).
+
+# Look & feel (no default)
+Style		logbook.css
+
+# Character set sent to the browser
+# NB: common encodings are ISO-8859-1 (Latin-1), US-ASCII, UTF-7, UTF-8, UTF-16,
+# WINDOWS-1252 and other encodings in the ISO-8859 series, such as ISO-2022-JP,
+# EUC-KR, etc. Here's a list of character encoding names registred by IANA
+# http://www.iana.org/assignments/character-sets
+#Charset	utf-8			# UTF-8 (default)
+
+# Calendar format European (dd-mm-yyyy) or American (mm-dd-yyyy)
+#CalFormat	eu			# eu (default), us
+
+# Date display format (man strftime for all expansion codes)
+#DateFormat	"%a %b %e %H:%M:%S %Y"	# default
+#DateFormat	"%d-%m-%Y %H:%M:%S"
+
+# How many days to mark an entry as 'new'
+#DaysNew	2			# 0 = disable; 2 = default
+
+# Refresh the main logbook's page (in seconds)
+# Warning: this can be annoying and disturb your work.
+#Refresh	600			# 0 = default = disable
+
+# Entries per page
+#EntriesPerPage	10			# 10 = default; 0 = disable
+
+# Attachment directives
+Attach {
+	Dir	attach			# upload directory ('attach' = default)
+	Size	2			# maximum size in Mb (2 = default)
+}
+
+# Banners
+Banner {
+	blank	""
+
+	sans	"<a href='http://isc.sans.org' target='_blank'><img border='0' src='https://isc.sans.org/images/status.gif' alt='SANS infocon' title='SANS infocon' /></a>"
+
+	symantec	"<a href='http://www.symantec.com/'><img border='0' src='http://www.symantec.com/img/threatcon/threatcon_level1.gif' alt='Symantec ThreatCon' title='Symantec ThreatCon' /></a>"
+
+	arbor	"<a href='http://atlas.arbor.net'><img border='0' src='http://atlas-public.ec2.arbor.net/images/threat_index.gif' alt='Atlas Threat Index' title='Atlas Threat Index' /></a>"
+
+	iss	"<a href='https://gtoc.iss.net/issEn/delivery/gtoc/index.jsp'><img border='0' src='http://www.iss.net/alertcon.php/' alt='IBM Internet Security Systems' title='IBM Internet Security Systems' /></a>"
+
+	#other	"<a href=''><img border='0' src='' alt='' title='' /></a>"
+}
+
+# Page footer (one footer for all books)
+Footnote	"<a href='http://web-logbook.sourceforge.net'>Web Logbook</a>, &copy;2007-2012 Jorge Morgado<br />&lt;weblogbook (at) morgado (dot) ch&gt;"
+
+# Mail server settings
+Mail {
+	ClientName		web-server.domain.name
+	ServerName		mail-server.domain.name
+	ServerPort		25
+	Organization		"Organization Name"
+	FromAddress		noreply-weblogbook@domain.name
+	ToAddress		your.email.address@domain.name
+	SubjectTag		[Web-Logbook]
+}
+
+# Language directives
+Lang {
+	# Active languages (in this order)
+	#Active	"en,de,fr,it,es,pt"
+	Active	"en,de,pt"
+
+	# Global default language (mandatory - no default)
+	Default		en
+
+	# Supported languages (not all are supported, though)
+	# If you feel like translating one language, please feel free to
+	# send your work and I will be glad to include it in a future release.
+	de {
+		Name	Deutsch
+	}
+
+	en {
+		Name	English
+	}
+
+	es {
+		Name	Espa&ntilde;ol
+	}
+
+	fr {
+		Name	Fran&ccedil;ais
+	}
+
+	it {
+		Name	Italiano
+	}
+
+	pt {
+		Name	Portugu&ecirc;s
+	}
+}
+
+# Logbook specific definitions
+Logbook {
+	# Active logbooks (in this order)
+	Active "fwdc,fwmo,gw_bo1,gw_bo2"
+
+	# Default logbook (mandatory - no default)
+	Default	"fwdc"
+
+	fwdc {
+		Title	"Data-Center Firewall"	# logbook's name
+		Dir	db			# db directory ('db' = default)
+		EntriesPerPage	20		# limit pages to 20 entries
+
+		Archive {
+			Automatic	Yes	# enable auto-archive (not yet implemented)
+			MaxEntries	500	# when reaches 500 entries
+			MaxSize		2	# or when larger than 2Mb
+		}
+
+		Banner	sans,arbor		# use sans banner
+
+		Mail {
+			Active		Yes
+			SubjectTag	"[Web-Logbook fwdc]"
+		}
+	}
+}
+
+Logbook {
+	fwmo {
+		Title	"Main Office Firewall"
+		Lang	pt			# take portuguese for this book
+		Banner	symantec
+	}
+}
+
+
+# You can also group several books together if they are related somehow.
+# This might make your configuration easier to read, although it has no
+# visible effect in the display.
+Logbook {
+	gw_bo1 {
+		Title	"Branch Office 1 Gateway"
+	}
+
+	gw_bo2 {
+		Title	"Branch Office 2 Gateway"
+		Refresh	300			# refresh every 5 minutes
+	}
+}
+
+# Users list
+User {
+	lab {
+		Nick	lab
+		Name	Lance A. Boyle
+	}
+
+	bsj {
+		Nick	bsj
+		Name	Blanche St-Jacques
+	}
+
+	gsc {
+		Nick	gsc
+		Name	George S. Coates
+	}
+
+	tp {
+		Nick	tp
+		Name	Taylor Page
+	}
+
+	ljb {
+		Nick	ljb
+		Name	Luca J. Bailey
+	}
+
+	omj {
+		Nick	omj
+		Name	Oscar M. Jarvis
+	}
+
+	sow {
+		Nick	sow
+		Name	Sebastian O. Winter
+	}
+}
+
+# HTTP Content-types for uploaded attachment files
+# Do not use 'binary' since this is reserved by the application
+Types {
+	html {
+		Description	"HTML source"
+		Type		"text/html"
+		Extension	html htm
+
+		# A link to open the file in the browser will be shown
+		# Set to 'yes' for file types your browser can open
+		ViewOnline	yes
+	}
+
+	plain {
+		Description	"Plain text"
+		Type		"text/plain"
+		Extension	txt log
+		ViewOnline	yes
+	}
+
+	gif {
+		Description	"GIF image"
+		Type		"image/gif"
+		Extension	gif
+		ViewOnline	yes
+	}
+
+	jpeg {
+		Description	"JPEG image"
+		Type		"image/jpeg"
+		Extension	jpeg jpg
+		ViewOnline	yes
+	}
+
+	png {
+		Description	"PNG image"
+		Type		"image/png"
+		Extension	png
+		ViewOnline	yes
+	}
+
+	xml {
+		Description	"XML source"
+		Type		"application/xml"
+		Extension	xml
+		ViewOnline	yes
+	}
+
+	# Most of these have been taken from Apache mod_mime_magic
+	# configuration file. I should actually check for their correctness...
+	java {
+		Description	"Java file"
+		Type		"application/java"
+		Extension	java jar
+	}
+
+	sunaudio {
+		Description	"Sun/NeXT audio data"
+		Type		"audio/x-adpcm"
+		Extension	snd
+	}
+
+	decaudio {
+		Description	"DEC systems audio data"
+		Type		"audio/x-dec-basic"
+		Extension	dec
+	}
+
+	aiff {
+		Description	"AIFF, AIFF-C, & 8SVX audio files"
+		Type		"audio/x-aiff"
+		Extension	aiff aifc 8svx
+	}
+
+	midi {
+		Description	"Creative Labs MIDI"
+		Type		"audio/unknown"
+		Extension	mthd midi
+	}
+
+	cmf {
+		Description	"Creative Music data"
+		Type		"audio/unknown"
+		Extension	cmf ctmf
+	}
+
+	sbi {
+		Description	"SoundBlaster instrument data"
+		Type		"audio/unknown"
+		Extension	sbi
+	}
+
+	wav {
+		Description	"Microsoft WAVE format"
+		Type		"audio/x-wav"
+		Extension	wav wave
+	}
+
+	riff {
+		Description	"Microsoft RIFF"
+		Type		"audio/unknown"
+		Extension	riff
+	}
+
+	xpm {
+		Description	"XPM icons"
+		Type		"image/x-xbm"
+		Extension	xpm
+	}
+
+	c {
+		Description	"C/C++ program text"
+		Type		"text/plain"
+		Extension	c cpp
+		ViewOnline	yes
+	}
+
+	rexx {
+		Description	"REXX program text"
+		Type		"text/plain"
+		Extension	rex rexx
+		ViewOnline	yes
+	}
+
+	compress {
+		Description	"Unix compress"
+		Type		"application/octet-stream"
+		Extension	compress
+	}
+
+	gzip {
+		Description	"GNU zip"
+		Type		"application/octet-stream"
+		Extension	gz
+		ViewOnline	yes
+	}
+
+	zip {
+		Description	"ZIP archive"
+		Type		"application/octet-stream"
+		Extension	zip
+		ViewOnline	yes
+	}
+
+	frame {
+		Description	"FrameMaker file"
+		Type		"application/x-frame"
+		Extension	mml
+	}
+
+	pbm {
+		Description	"PBM file"
+		Type		"image/x-portable-bitmap"
+		Extension	pbm
+	}
+
+	pgm {
+		Description	"PGM file"
+		Type		"image/x-portable-greymap"
+		Extension	pgm
+	}
+
+	ppm {
+		Description	"PPM file"
+		Type		"image/x-portable-pixmap"
+		Extension	ppm
+	}
+
+	niff {
+		Description	"Navy Interchange File Format"
+		Type		"image/x-niff"
+		Extension	niff nif
+	}
+
+	tiff {
+		Description	"TIFF file"
+		Type		"image/tiff"
+		Extension	tiff tif
+	}
+
+	bmp {
+		Description	"PC bitmaps"
+		Type		"image/bmp"
+		Extension	bmp
+		ViewOnline	yes
+	}
+
+	lisp {
+		Description	"LISP program"
+		Type		"text/plain"
+		Extension	lisp
+		ViewOnline	yes
+	}
+
+	elc {
+		Description	"Emacs"
+		Type		"application/x-elc"
+		Extension	elc
+	}
+
+	mail {
+		Description	"Mail messge"
+		Type		"message/rfc822"
+		Extension	mail
+	}
+
+	news {
+		Description	"News file"
+		Type		"message/news"
+		Extension	news
+	}
+
+	doc {
+		Description	"MS Word"
+		Type		"application/msword"
+		Extension	doc
+		ViewOnline	yes
+	}
+
+	ps {
+		Description	"PostScript file"
+		Type		"application/postscript"
+		Extension	ps
+	}
+
+	pdf {
+		Description	"Acrobat PDF"
+		Type		"application/pdf"
+		Extension	pdf
+		ViewOnline	yes
+	}
+
+	sc {
+		Description	"sc spreadsheet"
+		Type		"application/x-sc"
+		Extension	sc
+	}
+
+	dvi {
+		Description	"TeX file"
+		Type		"application/x-dvi"
+		Extension	dvi
+	}
+
+	rtf {
+		Description	"Rich Text Format"
+		Type		"application/rtf"
+		Extension	rtf
+		ViewOnline	yes
+	}
+
+	mpeg {
+		Description	"MPEG file"
+		Type		"video/mpeg"
+		Extension	mpeg mpg
+		ViewOnline	yes
+	}
+
+	wlb {
+		Description	"Web Logbook"
+		Type		"application/octet-stream"
+		Extension	wlb
+	}
+
+	csv {
+		Description	"Comma-Separated Values"
+		Type		"text/csv"
+		Extension	csv
+	}
+}

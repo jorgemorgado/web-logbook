@@ -1,0 +1,170 @@
+# Web logbook English strings
+#
+# UTF-8 encoding or whatever you define in the configuration file.
+#
+# The format of this file is:
+# <id>	<string>
+#
+# <id> must be any unique identifier for the string (numeric or alphanumeric)
+# <string> is the corresponding text
+#
+# One entry per line with fields separated by any number of spaces or tabs.
+# Blank lines or lines starting with '#' are ignored.
+#
+
+1	The number of logbook entries (%d) is lower than %d.
+2	The logbook's size (%.1f Mb) is lower than %.1f Mb.
+3	%s Archive
+4	Database
+5	Database name
+6	Database size
+7	Total entries
+8	Open Archive
+9	Cannot create attachment upload directory (%s).
+10	Attach ID not found. Wrong HTTP referer (%s)?
+11	Upload error (error code: %d).
+12	Cannot write to upload directory (%s). %s.
+13	No file was received.
+14	Cannot remove selected file (%s). %s.
+15	(auto detect)
+16	%s Attachment
+17	(max. %dMb, or the upload will terminate silently)
+18	Content-Type
+19	Failed to open the selected file (%s). %s.
+20	%s Attachments List
+21	Filename
+22	Binary
+23	The Subject field is required.
+24	Add a new entry
+25	Subject
+26	Description
+27	(blank is "Now")
+28	Save
+29	Reset
+30	Attach
+31	Logbook entries (%d)
+32	Logbook search result (%d)
+33	%s Search
+34	(attach)
+35	with
+36	without
+37	%s Archive Search
+38	Search criteria
+39	Case sensitive search
+40	Browse Archive
+41	Print
+42	Close
+43	Last access time
+44	Back
+45	Select date
+46	Select subject
+47	Ascending
+48	Descending
+49	Delete
+50	Are you sure?
+51	Type
+52	%s Subject
+53	Edit
+54	Search
+55	Archive
+56	View online
+57	Last data modification time
+58	Date
+59	User
+60	no files
+61	1 file
+62	%d files
+63	New
+64	Attachments list
+65	From
+66	To
+67	Logbook successfuly archived.
+68	Logbook archive failed.
+69	The logbook is still empty. Can't archive!
+70	Edit entry number: %d
+71	Change book
+72	Change language
+73	Start date is higher than end date. Both values have been swapped.
+74	Trends
+75	days
+76	No records found.
+77	15 minutes
+78	hour
+79	day
+80	week
+81	month
+82	year
+83	%s Trends
+84	%s Archive Trends
+85	Trends interval
+86	Limit results to %s entries.
+87	Trends (%d records analyzed)
+88	Statistics
+89	Top Subjects
+90	Top Users
+91	Top Attachments
+92	Value
+93	Entries in the logbook
+94	Entries with attachments
+95	Attachments
+96	Active users
+97	Oldest entry
+98	Newest entry
+100	Interval
+101	Average input / %s
+102	The Subject field is too long.
+103	The Description field is too long.
+104	Pos.
+105	Count
+106	Error
+107	Warning
+108	Notice
+109	Information
+110	Debug
+111	Previous
+112	Next
+113	Display
+114	Find
+115	Please enter the search criteria.
+116	And
+117	Or
+118	%d characters left
+119	1 character left
+120	no characters left
+121	Import
+122	Export
+123	%s Export
+124	%s Import
+125	The File name is required.
+126	Format
+127	(note: attachments are not automatically imported)
+128	Please, reload the logbook - %d record(s) imported.
+129	A total of %d attachment(s) have not been imported.
+130	Found %d bad record(s).
+131	Invalid file format. No records imported.
+132	Web Logbook (native)
+133	Delimiter-separated values (CSV, ...)
+134	Extensible Markup Language (XML)
+135	Delimiter
+136	Comma
+137	Tab
+138	Colon
+139	Semicolon
+140	Pipe
+141	Options
+142	Standard
+143	Group by
+144	- day
+145	- week
+146	- month
+147	- year
+148	- user
+149	- subject
+150	W
+151	View
+152	Expand all
+153	Collapse all
+154	Loading...
+155	The selected view is not available.
+156	Invalid date/time.
+157	Missing '%s' on '%s' section.
