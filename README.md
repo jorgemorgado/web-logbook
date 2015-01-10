@@ -33,7 +33,7 @@ Features
 
 Contributors
 ------------
-- Jorge Morgado <jorge (at) morgado (dot) ch>
+- Jorge Morgado (jorge (at) morgado (dot) ch)
 - also see http://web-logbook.sourceforge.net
 
 License
@@ -43,7 +43,7 @@ Released under GPL3.
 Development
 -----------
 Most features have not been exhaustively tested. If you find any bugs,
-please let me know at <weblogbook (at) morgado (dot) ch>
+please let me know at (weblogbook (at) morgado (dot) ch)
 
 Not all languages are supported (at least not yet!) You should disable them
 in the configuration file. Also, English is not my mother tonge so I hope my
